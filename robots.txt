@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /
+Allow: /$
+Allow: /posts/
+
+Sitemap: https://7omb2006.github.io/mizuki-preview/sitemap-index.xml

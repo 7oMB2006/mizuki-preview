@@ -1,0 +1,1 @@
+import"./translation.ZY6JVfS3.js";import"./config.D0EzaV3_.js";import"./date-utils.JvW1sSGL.js";function a(r,e){return r.replace(/^\/|\/$/g,"").toLowerCase()===e.replace(/^\/|\/$/g,"").toLowerCase()}function t(...r){return r.join("/").replace(/\/+/g,"/")}function p(r){return t("","/mizuki-preview/",r)}export{p as n,a as t};

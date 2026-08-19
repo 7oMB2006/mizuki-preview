@@ -1,7 +1,7 @@
 
-This website is built with the **Astro** framework using the [Mizuki](https://github.com/LyraVoid/Mizuki) theme.
+这是 7oMB 的个人博客预览站，使用 Astro 与 Mizuki 主题构建。
 
-::github{repo="LyraVoid/Mizuki"}
+站点内容会逐步替换为个人文章、项目记录和生活观察。
 
 ## 🌟 Theme Features
 
@@ -46,4 +46,4 @@ This website is built with the **Astro** framework using the [Mizuki](https://gi
 
 ---
 
-*Built with ❤️ using Astro and inspired by modern web design principles.*
+*Built with Astro and Mizuki.*

@@ -7,6 +7,7 @@ const projectRoot = path.resolve(
 	"..",
 );
 const distDirectory = path.join(projectRoot, "dist");
+const siteBasePath = "/mizuki-preview/";
 
 function getAttribute(tag, name) {
 	const match = tag.match(
@@ -44,10 +45,12 @@ async function loadPageStyles(htmlPath) {
 				return "";
 			}
 
-			const assetPath = path.resolve(
-				distDirectory,
-				pathname.startsWith("/") ? pathname.slice(1) : pathname,
-			);
+			const siteRelativePath = pathname.startsWith(siteBasePath)
+				? pathname.slice(siteBasePath.length)
+				: pathname.startsWith("/")
+					? pathname.slice(1)
+					: pathname;
+			const assetPath = path.resolve(distDirectory, siteRelativePath);
 			const relativePath = path.relative(distDirectory, assetPath);
 			if (relativePath.startsWith("..") || path.isAbsolute(relativePath)) {
 				throw new Error(
@@ -82,7 +85,7 @@ const pages = [
 	{
 		name: "About page",
 		htmlPath: "about/index.html",
-		requiredMarkup: [["card-github", "rendered GitHub repository card"]],
+		requiredMarkup: [],
 		requiredRules: [
 			[".card-github", "GitHub repository card styles"],
 			[".custom-md .image-grid", "extended Markdown layout styles"],

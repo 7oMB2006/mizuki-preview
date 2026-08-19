@@ -102,7 +102,7 @@ export default defineConfig({
 		: [],
 
 	site: siteConfig.siteURL,
-	base: "/",
+	base: "/mizuki-preview/",
 	trailingSlash: "always",
 	compressHTML: true,
 
